@@ -7,13 +7,12 @@
 * Rancidbacon (http://rancidbacon.com/) for his arduino port of the v-usb library (https://code.google.com/archive/p/vusb-for-arduino/downloads)
 * seejaydee for his IR library for tiny cores found on the comments of the instructable https://www.instructables.com/id/Attiny-IR-library/ code on https://drive.google.com/open?id=0B_w9z88wnDtFNHlqYU5sWEZuV0U
 *
-* To add new key_codes, check out the pdf http://www.usb.org/developers/hidpage/Hut1_12v2.pdf and search for section "Keyboard/Keypad Page" page 53 and use the numbers
+* To add new key_codes, check out the pdf http://www.usb.org/developers/hidpage/Hut1_12v2.pdf and look out for the section "Keyboard/Keypad Page" page 53 then use the numbers
 * in the column Usage ID (Dec) to associate your remote buttons to keyboard codes.
-* Then edit the file UsbKeyboard.h and add new defines to those already existent
+* Edit the file UsbKeyboard.h and add new defines to those already existent
 */
-#include "UsbKeyboard.h" // http://code.google.com/p/vusb-for-arduino/
-#include "tiny_IRremote.h" // by seejaydee on https://www.instructables.com/id/Attiny-IR-library/ code on https://drive.google.com/open?id=0B_w9z88wnDtFNHlqYU5sWEZuV0U
-
+#include "UsbKeyboard.h" 
+#include "tiny_IRremote.h" 
 #define RECV_PIN 1
 IRrecv irrecv(RECV_PIN);
 decode_results results;
